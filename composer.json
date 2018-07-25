@@ -1,0 +1,15 @@
+{
+	"name": "lagframe/minecraft_server_manager",
+	"description": "PHP script to manage a minecraft server",
+	"keywords":
+	[
+		"minecraft"
+	],
+	"require":
+	{
+		"php": ">=5.4",
+		"xpaw/php-minecraft-query": "^2.0",
+		"thedudeguy/rcon": "^1.0",
+		"monolog/monolog": "^1.23"
+	}
+}
