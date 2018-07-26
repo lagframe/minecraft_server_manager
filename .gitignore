@@ -1,0 +1,9 @@
+vendor/
+sftp-config.json
+foo
+*.sublime-project
+*.sublime-workspace
+.*
+!.gitignore
+server_manager.log
+composer.phar
