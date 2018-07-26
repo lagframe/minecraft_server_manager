@@ -47,3 +47,11 @@ function say_gracefull_shutdown (&$rcon) {
 
 	$rcon->sendCommand("say Server wird jetzt herunter gefahren!");
 }
+
+function write_shudown_file (&$log) {
+	// Write the shutdown file.
+	$log->info('Writing the shutdown file');
+	$file = fopen('.shutdown-server',"w");
+	fwrite($file, 'shutdown');
+	fclose($file);
+}

@@ -70,11 +70,7 @@ if ($count_players !== false) {
 					$log->info('System shudown Timer started');
 					sleep(60); // 60 seconds to stop the Server.
 					if (get_player_count($Query, $log, false) == false) {
-						// Write the shutdown file.
-						$log->info('Writing the shutdown file');
-						$file = fopen('.shutdown-server',"w");
-						fwrite($file, 'shutdown');
-						fclose($file);
+						write_shudown_file ($log);
 					} else {
 						$log->critical("Minecraft did not stop in Time!");
 					}
@@ -89,6 +85,8 @@ if ($count_players !== false) {
 			$log->critical('Rcon connection failed');
 		}
 	}
+} else {
+	write_shudown_file ($log);
 }
 
 
